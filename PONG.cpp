@@ -7,13 +7,13 @@
 #include <conio.h>
 using namespace std;
 enum eDir { STOP = 0, LEFT = 1, UPLEFT = 2, DOWNLEFT = 3, RIGHT = 4, UPRIGHT = 5, DOWNRIGHT = 6};
-class cBall
+class Pong
 {
 private:
 	int x, y, firstX, firstY;
 	eDir direction;
 public:
-	cBall(int posX, int posY)
+	Pong(int posX, int posY)
 	{
 		firstX = posX;
 		firstY = posY;
@@ -64,7 +64,7 @@ public:
 			break;
 		}
 	}
-	friend ostream & operator<<(ostream & o, cBall c)
+	friend ostream & operator<<(ostream & o, Pong c)
 	{
 		o << "Ball [" << c.x << "," << c.y << "][" << c.direction << "]";
 		return o;
@@ -101,25 +101,25 @@ public:
 class cGameManger
 {
 private:
-	int width, height;
+	int length, width;
 	int score1, score2;
 	char up1, down1, up2, down2;
 	bool quit;
-	cBall * ball;
+	Pong * ball;
 	cPaddle *player1;
 	cPaddle *player2;
 public:
-	cGameManger(int w, int h)
+	cGameManger(int l, int w)
 	{
 		srand(time(NULL));
 		quit = false;
 		up1 = 'w'; up2 = 'i';
 		down1 = 's'; down2 = 'k';
 		score1 = score2 = 0;
-		width = w; height = h;
-		ball = new cBall(w / 2, h / 2);
-		player1 = new cPaddle(1, h / 2 - 3);
-		player2 = new cPaddle(w - 2, h / 2 - 3);
+		length = l; width = w;
+		ball = new Pong(w / 2, w / 2);
+		player1 = new cPaddle(1, w / 2 - 3);
+		player2 = new cPaddle(w - 2, w / 2 - 3);
 	}
 	~cGameManger()
 	{
@@ -143,7 +143,7 @@ public:
 			cout << "\xB2";
 		cout << endl;
 
-		for (int i = 0; i < height; i++)
+		for (int i = 0; i < width; i++)
 		{
 			for (int j = 0; j < width; j++)
 			{
@@ -213,10 +213,10 @@ public:
 				if (player2y > 0)
 					player2->moveUp();
 			if (current == down1)
-				if (player1y + 4 < height)
+				if (player1y + 4 < width)
 					player1->moveDown();
 			if (current == down2)
-				if (player2y + 4 < height)
+				if (player2y + 4 < width)
 					player2->moveDown();
 
 			if (ball->getDirection() == STOP)
@@ -245,7 +245,7 @@ public:
 				if (bally == player2y + i)
 					ball->changeDirection((eDir)((rand() % 3) + 1));
 
-		if (bally == height - 1)
+		if (bally == width - 1)
 			ball->changeDirection(ball->getDirection() == DOWNRIGHT ? UPRIGHT : UPLEFT);
 		if (bally == 0)
 			ball->changeDirection(ball->getDirection() == UPRIGHT ? DOWNRIGHT : DOWNLEFT);
@@ -266,7 +266,7 @@ public:
 };
 int main()
 {
-	cGameManger c(60, 20);
+	cGameManger c(20, 20);
 	c.Run();
 	return 0;
 }
