@@ -1,6 +1,8 @@
 //2022-02-18
 //Kai Hughes
 //RUN IN TERMINAL
+//ADD GAMEOVER
+
 
 #include <iostream>
 #include <time.h>
