@@ -1,0 +1,17 @@
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/guiSharedElements/NavigationBar.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/pages/AbstractPage.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/pages/HomePage.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/pages/BrowsePage.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/style/Style.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/style/RoundedBorder.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/pages/SignUpPage.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/tools/PropertyLoader.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/tools/InfoPanel.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/core/PageLoader.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/core/DataBaseConnector.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/pages/SignInPage.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/core/Main.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/api/YahooAPI.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/auth/DatabaseHandler.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/graph/Graph.java
+/Users/hugomasson/Desktop/Code/Java/eclipse-workspace/StocksWebApp/src/fr/stocks/core/MainFrame.java
